@@ -18,11 +18,27 @@ let obj;
 let data; 
 
 app.get("/", function (req, res) {
+    // let options = {
+    //     method: 'GET',
+    //     url: 'https://twelve-data1.p.rapidapi.com/stocks',
+    //     qs: {
+    //       exchange: "NYSE",
+    //       country: 'United States',
+    //       format: 'json'
+    //     },
+    //     headers: {
+    //       'X-RapidAPI-Key': 'b998fb38e0msh5bdbc233f355651p1e58ccjsn9224f21113ce',
+    //       'X-RapidAPI-Host': 'twelve-data1.p.rapidapi.com'
+    //     }
+    //   };
+
     let options = {
         method: 'GET',
-        url: 'https://twelve-data1.p.rapidapi.com/stocks',
+        url: 'https://twelve-data1.p.rapidapi.com/time_series',
         qs: {
-          country: 'United States',
+            symbol: 'AMZN',
+            interval: '1day',
+            outputsize: '30',
           format: 'json'
         },
         headers: {
@@ -36,9 +52,9 @@ app.get("/", function (req, res) {
     
       obj = JSON.parse(body);
 
-      //console.log(obj.data);
+      console.log(obj);
       data = {
-        data: obj.data
+        values: obj.values
     }
 
   });
@@ -53,7 +69,7 @@ app.get("/", function (req, res) {
 //     type: obj.type
 //   }
 
-    ///console.log("data", data)
+    //console.log("data", data)
     return res.render("\index", data);
 });
 

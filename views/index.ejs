@@ -8,11 +8,10 @@
 <body>
     <h1>Star Trade</h1>
 
-        <% for(var i = 0; i < 10; i++){ %>
+        <% for(var i = 0; i < 30; i++){ %>
             <p>
-                <p><%= data[i].symbol%>  </p>
-                <p><%= data[i].name%>  </p>
-                <button value="<%= data[i].symbol %>"><%= data[i].symbol %></button>
+                <%= values[i].open %>
+                
             </p>
         <% }%>
 
