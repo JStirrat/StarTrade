@@ -50,7 +50,7 @@ body{
 
 }
 
-h1{
+h1 {
     font-size: 72px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
@@ -60,14 +60,20 @@ h1{
     height: 128px;
 }
 
-h2{
+h2 {
     font-size: 48px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     background-color: black;
 }
 
-p{
+p {
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#login {
+    color: white;
+    font-size: 48px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
