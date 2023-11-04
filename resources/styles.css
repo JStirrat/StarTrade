@@ -1,0 +1,73 @@
+/* Spacing for main webpage */
+
+body{
+    background-color: black;
+}
+
+#nav ul {
+    display: flex; 
+    padding: 0px; 
+    gap: 10px;
+}
+
+#nav li {
+    flex-grow: 1; 
+    text-align: center;
+}
+/* Link - Without Hover */
+#nav a:link {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Geneva, Tahoma, sans-serif;
+    font-size: 36px; 
+    font-variant: small-caps; 
+    text-decoration: none;
+}
+/* Link - With Hover */
+#nav a:hover {
+    background-color: darkblue;
+    color: purple;
+    padding: 10px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+#main {
+    flex: 0 1 70%;
+}
+
+#aside {
+    flex: 0 1 30%;
+    flex: 0 1 60%;
+}
+
+#aside {
+    flex: 0 1 40;
+
+}
+
+h1{
+    font-size: 72px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: white;
+    background-image: url("SpaceTradeImage.png");
+    background-size: auto;
+    height: 128px;
+}
+
+h2{
+    font-size: 48px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: black;
+}
+
+p{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
