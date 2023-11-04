@@ -15,6 +15,10 @@ app.get("/", function (req, res) {
     return res.render("\index");
 });
 
+app.get("/index", function (req, res) {
+    return res.render("/index");
+});
+
 app.listen(PORT, function () {
     console.log("Server listening on port " + PORT);
 });

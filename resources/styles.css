@@ -16,17 +16,18 @@ body{
 }
 /* Link - Without Hover */
 #nav a:link {
+    text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Geneva, Tahoma, sans-serif;
-     font-size: 14px; 
-     font-variant: small-caps; 
-     text-decoration: none;
+    font-size: 36px; 
+    font-variant: small-caps; 
+    text-decoration: none;
 }
 /* Link - With Hover */
 #nav a:hover {
     background-color: darkblue;
     color: purple;
     padding: 10px;
-    text-decoration: overline;
+    text-decoration: underline;
     font-weight: bold;
 }
 
