@@ -1,0 +1,34 @@
+/* Spacing for main webpage */
+/* 
+    - #container
+    - #main
+    - #aside
+*/
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+#main {
+    flex: 0 1 70%;
+}
+
+#aside {
+    flex: 0 1 30%;
+}
+
+h1{
+    font-size: 72px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: white;
+    background-image: url("SpaceTradeImage.png");
+
+}
+
+h2{
+    font-size: 48px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: black;
+}
