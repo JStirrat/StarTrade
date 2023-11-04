@@ -7,11 +7,15 @@
 </head>
 <body>
     <h1>Star Trade</h1>
-    <p>We did it!</p>
+
+        <% for(var i = 0; i < 10; i++){ %>
+            <p>
+                <p><%= data[i].symbol%>  </p>
+                <p><%= data[i].name%>  </p>
+                <button value="<%= data[i].symbol %>"><%= data[i].symbol %></button>
+            </p>
+        <% }%>
 
 
-
-
-    
 </body>
 </html>
