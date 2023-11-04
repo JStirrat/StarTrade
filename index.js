@@ -80,8 +80,13 @@ app.get("/stock_list", function (req, res) {
 });
 
 app.get("/index", function (req, res) {
-    return res.render("/index");
+    return res.render("index.ejs");
 });
+
+app.get("/stock_list", function (req, res) {
+    return res.render("stock_list.ejs");
+});
+
 
 app.listen(PORT, function () {
     console.log("Server listening on port " + PORT);
