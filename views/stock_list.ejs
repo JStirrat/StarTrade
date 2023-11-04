@@ -19,18 +19,35 @@
     <div id="nav">
         <ul>
             <li> <a href="/">Home</a></li>
-            <li> <a href="/stock_list">Stocks</a></li> 
-            <li> <a href="cryptocurrency.ejs">Cryptocurrency</a></li>
+            <li> <a href="/stock_list">Stocks</a></li>
+            <li> <a href="/cryptocurrency">Cryptocurrency</a></li
         </ul>
     </div>
 
     <div id="container">
         <div id="main">
-            <h2>Stocks</h2>
+            <h2>Stock Lists</h2>
+            <table style="width:100%">
+                <tr>
+                  <th>Ticker Symbol</th>
+                  <th>Company</th>
+                  <th>Price</th>
+                </tr>
+                <tr style="text-align: center;">
+                  <td>APPL</td>
+                  <td><input type="button" value="Apple"></td>
+                  <td>Apple</td>
+                  <td>176.66</td>
+                </tr>
+                <tr style="text-align: center;">
+                  <td>QQQ</td>
+                  <td>Invesco QQQ</td>
+                  <td>368.32</td>
+                </tr>
+              </table>
         </div>
         <div id="aside">
             <!-- Image? -->
-
         </div>
     </div>
 </body>

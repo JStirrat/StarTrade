@@ -75,10 +75,6 @@ app.get("/", function (req, res) {
     return res.render("\index", data);
 });
 
-app.get("/stock_list", function (req, res) {
-    return res.render("\stock_list");
-});
-
 app.get("/index", function (req, res) {
     return res.render("index.ejs");
 });
@@ -87,6 +83,9 @@ app.get("/stock_list", function (req, res) {
     return res.render("stock_list.ejs");
 });
 
+app.get("/buysell", function (req, res) {
+    return res.render("buysell.ejs");
+});
 
 app.listen(PORT, function () {
     console.log("Server listening on port " + PORT);
