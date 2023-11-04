@@ -5,12 +5,18 @@ app.use(express.urlencoded({
     extended: true
 }));
 
+app.use(express.static("resources"));
+
 app.set("view engine", "ejs");
 
 const PORT = 3000;
 
 app.get("/", function (req, res) {
     return res.render("\index");
+});
+
+app.get("/index", function (req, res) {
+    return res.render("/index");
 });
 
 app.listen(PORT, function () {
