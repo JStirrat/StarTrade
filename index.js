@@ -5,6 +5,8 @@ app.use(express.urlencoded({
     extended: true
 }));
 
+app.use(express.static("resources"));
+
 app.set("view engine", "ejs");
 
 const PORT = 3000;
