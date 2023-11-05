@@ -194,7 +194,8 @@ app.get("/cryptocurrency", function (req, res) {
 
 
 app.post("/buy_sell", function (req, res) {
-    console.log()
+    console.log(req)
+    return res.render("buy_sell.ejs"); 
 });
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
