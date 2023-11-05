@@ -107,8 +107,8 @@ app.get("/stock_list", function (req, res) {
   return res.render("stock_list.ejs", data);
 });
 
-app.get("/buysell", function (req, res) {
-  return res.render("buysell.ejs");
+app.get("/cryptocurrency", function (req, res) {
+    return res.render("cryptocurrency.ejs");
 });
 
 
