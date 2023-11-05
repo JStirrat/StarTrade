@@ -66,7 +66,7 @@ app.get("/index", function (req, res) {
   return res.render("index.ejs");
 });
 
-app.get("/stock_list", function (req, res) {
+app.route("/stock_list", function (req, res) {
   let options = {
     method: 'GET',
     url: 'https://twelve-data1.p.rapidapi.com/stocks',
@@ -98,7 +98,8 @@ app.get("/stock_list", function (req, res) {
 });
 
 
-app.get("/cryptocurrency", function (req, res) {
+
+app.route("/cryptocurrency", function (req, res) {
   let options = {
     method: 'GET',
     url: 'https://twelve-data1.p.rapidapi.com/cryptocurrencies',
