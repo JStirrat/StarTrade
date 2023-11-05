@@ -194,8 +194,38 @@ app.get("/cryptocurrency", function (req, res) {
 
 
 app.post("/buy_sell", function (req, res) {
-    console.log(req)
-    return res.render("buy_sell.ejs"); 
+    let code = req.body.stock_symbol
+
+    let options = {
+      method: 'GET',
+      url: 'https://twelve-data1.p.rapidapi.com/time_series',
+      qs: {
+        symbol: code,
+        interval: '1day',
+        outputsize: '30',
+        format: 'json'
+      },
+      headers: {
+        'X-RapidAPI-Key': 'b998fb38e0msh5bdbc233f355651p1e58ccjsn9224f21113ce',
+        'X-RapidAPI-Host': 'twelve-data1.p.rapidapi.com'
+      }
+    };
+    
+  
+  
+    request(options, function (error, response, body) {
+      if (error) throw new Error(error);
+  
+      obj = JSON.parse(body);
+  
+      console.log("response was:", obj);
+      data = {
+        symbol: obj.meta.symbol,
+        values: obj.values
+      }
+  
+    });
+    return res.render("buy_sell.ejs", data); 
 });
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
