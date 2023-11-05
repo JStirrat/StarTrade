@@ -93,16 +93,6 @@ app.get("/stock_list", function (req, res) {
 
   });
 
-  //   data = {
-  //     symbol: obj.symbol,
-  //     name: obj.name,
-  //     currency: obj.currency,
-  //     exchange: obj.exchange,
-  //     mic_code: obj.mic_code,
-  //     country: obj.country,
-  //     type: obj.type
-  //   }
-
   console.log("data", data)
   return res.render("stock_list.ejs", data);
 });
