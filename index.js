@@ -129,6 +129,7 @@ app.get("/stock_list", function (req, res) {
 });
 
 
+
 app.route("/cryptocurrency", function (req, res) {
   let options = {
     method: 'GET',
@@ -158,6 +159,43 @@ app.route("/cryptocurrency", function (req, res) {
   });
 
   return res.render("cryptocurrency.ejs", data);
+});
+
+app.get("/cryptocurrency", function (req, res) {
+  let options = {
+    method: 'GET',
+    url: 'https://twelve-data1.p.rapidapi.com/cryptocurrencies',
+    qs: {
+      currency_quote: 'USD',
+      format: 'json'
+    },
+    headers: {
+      'X-RapidAPI-Key': 'b998fb38e0msh5bdbc233f355651p1e58ccjsn9224f21113ce',
+      'X-RapidAPI-Host': 'twelve-data1.p.rapidapi.com'
+    }
+  };
+  
+
+
+  request(options, function (error, response, body) {
+    if (error) throw new Error(error);
+
+    obj = JSON.parse(body);
+
+    console.log("response was:", obj);
+    data = {
+      values: obj.data
+    }
+
+  });
+
+  return res.render("cryptocurrency.ejs", data);
+});
+
+
+app.post("/buy_sell", function (req, res) {
+    console.log(req)
+    return res.render("buy_sell.ejs"); 
 });
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
