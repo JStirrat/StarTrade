@@ -1,27 +1,29 @@
 /* Spacing for main webpage */
 
-body{
+body {
     background-color: black;
 }
 
 #nav ul {
-    display: flex; 
-    padding: 0px; 
+    display: flex;
+    padding: 0px;
     gap: 10px;
 }
 
 #nav li {
-    flex-grow: 1; 
+    flex-grow: 1;
     text-align: center;
 }
+
 /* Link - Without Hover */
 #nav a:link {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Geneva, Tahoma, sans-serif;
-    font-size: 36px; 
-    font-variant: small-caps; 
+    font-size: 36px;
+    font-variant: small-caps;
     text-decoration: none;
 }
+
 /* Link - With Hover */
 #nav a:hover {
     background-color: darkblue;
@@ -52,7 +54,7 @@ body{
 
 h1 {
     font-size: 72px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     color: white;
     background-image: url("SpaceTradeImage.png");
@@ -62,7 +64,7 @@ h1 {
 
 h2 {
     font-size: 48px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     background-color: black;
 }
@@ -72,13 +74,15 @@ p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-table{
+table {
     font-size: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     background-color: blueviolet;
-#login {
-    color: white;
-    font-size: 48px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    #login {
+        color: white;
+        font-size: 48px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 }

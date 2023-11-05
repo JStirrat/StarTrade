@@ -20,30 +20,33 @@
         <ul>
             <li> <a href="/">Home</a></li>
             <li> <a href="/stock_list">Stocks</a></li>
-            <li> <a href="/cryptocurrency">Cryptocurrency</a></li
+            <li> <a href="/cryptocurrency">Cryptocurrency</a></li>
         </ul>
     </div>
 
     <div id="container">
         <div id="main">
             <h2>Stock Lists</h2>
-            <table style="width:100%">
+            <table style="width:100%; border: 2px solid;">
                 <tr>
                   <th>Ticker Symbol</th>
                   <th>Company</th>
-                  <th>Price</th>
                 </tr>
-                <tr style="text-align: center;">
-                  <td>APPL</td>
-                  <td><input type="button" value="Apple"></td>
-                  <td>Apple</td>
-                  <td>176.66</td>
-                </tr>
-                <tr style="text-align: center;">
-                  <td>QQQ</td>
-                  <td>Invesco QQQ</td>
-                  <td>368.32</td>
-                </tr>
+                <% for(var i = 0; i < values.length; i++) { %>
+                <% var stockList = ["TSLA", "ROKU", "LYFT", "PYPL", "NVDA", "AAPL", "LCID", "AMZN", "RIVN", "MSFT", "GOOGL", "F", "AMD", "AMC", "DIS", "NFLX", "KO", "ARM", "GDDY", "META"] %>
+                <% for(var j = 0; j < 20; j++) { %>
+                <% if(values[i].symbol == stockList[j]) {%>
+                  <tr style="text-align: center; outline: 2px solid white;">
+                    <td><%= values[i].symbol %></td>
+                    <td><%= values[i].name %></td>
+                    <td>
+                        <form action="POST">
+                            <input type="text" id="stock_symbol" value="<%= values[i].symbol %>" hidden="true">
+                            <input type="submit" value="View Stock" style="background-color: blueviolet; color: white; padding: 10px;"/>
+                        </form>
+                    </td>
+                  </tr>
+                  <% }} }%>
               </table>
         </div>
         <div id="aside">
