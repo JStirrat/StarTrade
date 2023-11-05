@@ -27,20 +27,27 @@
     <div id="container">
         <div id="main">
             <h2>Crypto List</h2>
-            <table style="width:100%">
-                <tr>
-                  <th>Crypto Symbol</th>
-                  <th>Name</th>
+            <table style="width:100%; border: 2px solid;">
+              <tr>
+                <th>Crypto Symbol</th>
+                <th>Crypto Currency</th>
+              </tr>
+              <% for(var i = 0; i < values.length; i++) { %>
+              <% var cryptoList = ["Filecoin","Bitcoin", "Ethereum", "Dogecoin", "Polkadot", "Litecoin", "Avalanche", "Cosmos", "OKB", "Uniswap", "Cronos", "Monero", "Optimism", "Maker", "Injective", "Mantle", "Quant", "The Graph"] %>
+              <% for(var j = 0; j < 20; j++) { %>
+              <% if(values[i].currency_base == cryptoList[j]) {%>
+                <tr style="text-align: center; outline: 2px solid white;">
+                  <td><%= values[i].symbol %></td>
+                  <td><%= values[i].currency_base %></td>
+                  <td>
+                      <form action="POST">
+                          <input type="text" id="crypto_symbol" value="<%= values[i].symbol %>" hidden="true">
+                          <input type="submit" value="View Crypto" style="background-color: blueviolet; color: white; padding: 10px;"/>
+                      </form>
+                  </td>
                 </tr>
-                <tr style="text-align: center;">
-                  <td>ETH</td>
-                  <td>Etherium</td>
-                </tr>
-                <tr style="text-align: center;">
-                  <td>BTC</td>
-                  <td>Bitcoin</td>
-                </tr>
-              </table>
+                <% }} }%>
+            </table>
         </div>
         <div id="aside">
             <!-- Image? -->
