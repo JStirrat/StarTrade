@@ -40,7 +40,7 @@
                     <td><%= values[i].symbol %></td>
                     <td><%= values[i].name %></td>
                     <td>
-                        <form action="/buy_sell" method="post">
+                        <form action="/buy_sell" method="POST">
                             <input type="text" id="stock_symbol" value="<%= values[i].symbol %>" hidden="true">
                             <input type="submit" value="View Stock" style="background-color: blueviolet; color: white; padding: 10px;"/>
                         </form>
