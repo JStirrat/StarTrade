@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Trade</title>
+
+    <!-- Fix this line: Should be adding webpage image from /resource folder -->
+    <link rel="icon" type="image/png" href="SpaceTradeImage.png"/> 
+
+    <!-- Fix this line: Should be linking style sheet to index.ejs  -->
+    <link href="styles.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <h1>Star Trade</h1>
+
+    <div id="nav">
+        <ul>
+            <li> <a href="/">Home</a></li>
+            <li> <a href="/stock_list">Stocks</a></li>
+            <li> <a href="/cryptocurrency">Cryptocurrency</a></li>
+        </ul>
+    </div>
+
+    <div id="container">
+        <div id="main">
+            <h2>Stock Lists</h2>
+            <table style="width:100%; border: 2px solid;">
+                <tr>
+                  <th>Ticker Symbol</th>
+                  <th>Company</th>
+                </tr>
+                <% for(var i = 0; i < values.length; i++) { %>
+                <% var stockList = ["TSLA", "ROKU", "LYFT", "PYPL", "NVDA", "AAPL", "LCID", "AMZN", "RIVN", "MSFT", "GOOGL", "F", "AMD", "AMC", "DIS", "NFLX", "KO", "ARM", "GDDY", "META"] %>
+                <% for(var j = 0; j < 20; j++) { %>
+                <% if(values[i].symbol == stockList[j]) {%>
+                  <tr style="text-align: center; outline: 2px solid white;">
+                    <td><%= values[i].symbol %></td>
+                    <td><%= values[i].name %></td>
+                    <td>
+                        <form action="POST">
+                            <input type="text" id="stock_symbol" value="<%= values[i].symbol %>" hidden="true">
+                            <input type="submit" value="View Stock" style="background-color: blueviolet; color: white; padding: 10px;"/>
+                        </form>
+                    </td>
+                  </tr>
+                  <% }} }%>
+              </table>
+        </div>
+        <div id="aside">
+            <!-- Image? -->
+        </div>
+    </div>
+</body>
+</html>
