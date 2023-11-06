@@ -23,9 +23,15 @@
     </div>
 
     <div id="container">
-        <p><%= symbol%>:</p><br/>
-        <p>Price:</p><br/>
-        <p><%= values[0].open%></p>
+        <h2><%= symbol%>:</h2><br/>
+        <h2>Price:</h2><br/>
+        <h2><%= values[0].open%></2>
+            <form id="Buy" action="/" method="post">
+            <!-- Name Text Box -->
+            <label for="Quantity">Buy Quantiy:</label>
+            <input type="text" id="quantity" name="Quantity" placeholder="Quantity" height="32px">
+            
+    <br>
     </div>
 </body>
 </html>
